@@ -5,12 +5,7 @@ WORKDIR /tmp/
 COPY composer.json ./
 COPY composer.lock ./
 
-RUN composer install \
-    --ignore-platform-reqs \
-    --no-interaction \
-    --no-plugins \
-    --no-scripts \
-    --prefer-dist
+RUN composer install 
 
 
 FROM php:7.2-apache-stretch
