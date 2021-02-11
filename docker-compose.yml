@@ -1,0 +1,18 @@
+version: "3.7"
+
+services:
+  test:
+    image: test
+    container_name: test
+    network_mode: test
+    build: .
+    environment:
+      - .env.example
+    #volumes:
+      #  - "./nginx/conf.d/:/etc/nginx/conf.d/"
+     # - "./nginx/logs:/var/log/nginx"
+    #   - "./nginx/ssl:/etc/nginx/ssl"
+    restart: always
+    ports:
+      - 555:80
+    #   - 443:443
