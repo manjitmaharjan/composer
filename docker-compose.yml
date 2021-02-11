@@ -6,8 +6,7 @@ services:
     container_name: test
     network_mode: test
     build: .
-    environment:
-      - .env.example
+
     #volumes:
       #  - "./nginx/conf.d/:/etc/nginx/conf.d/"
      # - "./nginx/logs:/var/log/nginx"
